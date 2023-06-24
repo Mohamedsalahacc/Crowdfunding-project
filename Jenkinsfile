@@ -8,7 +8,6 @@ pipeline {
                 
                     dir('Crowdfunding') {
                         sh '''
-                        
                         docker-compose up -d
                         '''
                     }
