@@ -12,7 +12,8 @@ services:
   web_app:
     build: .
     command: sh -c 'python manage.py migrate && python manage.py makemigrations && python manage.py createsuperuser --noinput && python manage.py runserver 0.0.0.0:8000'
-    
+    volumes:
+      - /app
     ports:
       - "8000:8000"
     environment:
