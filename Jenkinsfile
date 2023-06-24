@@ -8,7 +8,7 @@ pipeline {
                 
                     dir('Crowdfunding') {
                         sh '''
-
+                        chmod 777 manage.py
                         docker-compose up &
                         '''
                     }
